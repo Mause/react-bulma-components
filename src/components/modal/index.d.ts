@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { BulmaComponent, BulmaComponentWithoutModifiers } from '..';
+import { Card } from '../card';
 
 interface ModalProps {
   show?: boolean;
@@ -20,12 +21,7 @@ interface ModalCardHeaderProps {
 
 declare const Modal: BulmaComponentWithoutModifiers<ModalProps> & {
   Content: BulmaComponent<{}, 'div'>;
-  Card: BulmaComponent<{}, 'div'> & {
-    Header: BulmaComponent<ModalCardHeaderProps, 'header'>;
-    Body: BulmaComponent<{}, 'section'>;
-    Footer: BulmaComponent<{}, 'footer'>;
-    Title: BulmaComponent<{}, 'p'>;
-  };
+  Card: BulmaComponent<{}, 'div'> & Card;
 };
 
 export default Modal;
